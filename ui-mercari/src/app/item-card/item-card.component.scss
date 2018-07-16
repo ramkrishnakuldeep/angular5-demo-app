@@ -1,0 +1,22 @@
+@import '~assets/css/variables';
+.item{
+    .item-details{
+        padding: 0.75em 0.75em;
+    }
+    .item-name{
+        color: $text_light_gray
+    }
+    .item-costing{
+        color: $text_dark_gray;
+        position: relative;
+        margin-top: 0.25em;
+    }
+    
+    .item-image{
+        width: 100%;
+    }
+    .liked{
+        right: 0;
+        position: absolute;
+    }
+}

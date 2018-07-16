@@ -1,0 +1,46 @@
+<section class="image-section">
+  <div>
+    <img class="item-image" [src]="itemDetails.image" alt="itemDetails.name">
+  </div>
+</section>
+<section class="detail-section">
+  <div>
+    <span class="item-name">
+      {{itemDetails.name}}
+    </span>
+  </div>
+  <div>
+    <span class="liked">
+      <i fa class="far fa-heart"></i> {{ 'LIKED' | translate }}
+    </span>
+    <span class="liked-count">
+      {{itemDetails.like_count}}
+    </span>
+  </div>
+</section>
+<section class="info-section">
+  <div class="more-info">
+    <span>
+      {{ 'MORE_INFO' | translate}}
+    </span>
+  </div>
+  <div class="description">
+    <span>
+      {{itemDetails.description}}
+    </span>
+  </div>
+
+</section>
+<footer>
+  <div class="item-footer">
+    <span class="price">
+      {{itemDetails.price | currency:'JPY':'symbol':'1.0-0'}}
+    </span>
+    <span class="shipping-fee">
+      {{itemDetails.shippingFee}}
+    </span>
+    <button class="add-cart">
+      {{ 'ADD_CART'| translate }}
+    </button>
+  </div>
+</footer>

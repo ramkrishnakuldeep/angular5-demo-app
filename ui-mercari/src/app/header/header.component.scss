@@ -1,0 +1,29 @@
+@import '~assets/css/variables';
+.header-bar{
+    height: 4em;
+    background: $white_color;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    table{
+        height: inherit;
+        width: 100%;
+        border-bottom: 1px solid $light_gray;
+    }
+    td{
+        text-align: center;
+    }
+    td > input {
+        width: 90%;
+        padding: 1em;
+        background: $light_gray;
+        border: 1px solid $light_gray;
+        border-radius: 0.5em;
+    }
+    td.header-icon-item{
+        width: 13%;
+    }
+    td.header-search-item{
+        width: 61%;
+    }
+}

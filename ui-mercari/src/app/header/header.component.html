@@ -1,0 +1,36 @@
+<header class="header-bar">
+  <table [hidden]="itemDetailHeader">
+    <tr>
+      <td class="header-icon-item">
+        <i fa class="fa fa-bars fa-lg"></i>
+      </td>
+      <td class="header-search-item">
+        <input placeholder="{{ 'HEADER_SEARCH_TEXT' | translate }}" type="text" [(ngModel)]="data" (ngModelChange)="search($event)" name="data">
+      </td>
+      <td class="header-icon-item">
+        <i fa class="fa fa-bell fa-lg"></i>
+      </td>
+      <td class="header-icon-item">
+        <i fa class="fa fa-language fa-lg" (click)="changeLanguage(toggleToLang);"></i>
+      </td>
+    </tr>
+  </table>
+  <table [hidden]="!itemDetailHeader">
+    <tr>
+      <td class="header-icon-item" (click)="goBack();" [routerLink]="['/items']">
+        <i fa class="fa fa-chevron-left fa-lg"></i>
+      </td>
+      <td class="header-search-item">
+        <span>
+          {{itemName}}
+        </span>
+      </td>
+      <td class="header-icon-item">
+        <i fa class="fa fa-search fa-lg"></i>
+      </td>
+      <td class="header-icon-item">
+        <i fa class="fa fa-upload fa-lg"></i>
+      </td>
+    </tr>
+  </table>
+</header>

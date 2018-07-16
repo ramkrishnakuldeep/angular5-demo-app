@@ -1,0 +1,16 @@
+<div class="item" [routerLink] = "['/items/'+itemData.id]">
+  <img class="item-image" [src]="itemData.image" alt="{{itemData.name}}">
+  <div class="item-details">
+    <label class="item-name">
+      {{itemData.name}}
+    </label>
+    <div class="item-costing">
+      <span class="price">
+        {{itemData.price | currency:'JPY':'symbol':'1.0-0'}}
+      </span>
+      <span *ngIf="itemData.like_count" class="liked">
+        <i fa class="far fa-heart"></i>{{itemData.like_count}}
+      </span>
+    </div>
+  </div>
+</div>

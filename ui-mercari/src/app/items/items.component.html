@@ -1,0 +1,19 @@
+<section>
+  <ul>
+    <li *ngFor="let category of catagories; let i = index" (click)="categorySelector(i, $event)" [attr.id]="i" [attr.data-index]="i" [ngClass]="i == activeCategory ? 'active':''">
+      {{category.name}}
+    </li>
+  </ul>
+</section>
+
+<section class="items-container">
+  <div class="items" *ngFor="let item of items | itemfilter:searchItem">
+    <app-item-card [itemData]="item"></app-item-card>
+  </div>
+</section>
+
+<section class="camera-section">
+  <div class="camera">
+    <i fa class="fa fa-camera fa-lg"></i>
+  </div>
+</section>
